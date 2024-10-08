@@ -276,11 +276,9 @@ abstract class FieldsContract implements Arrayable, Fields
             ->state(function (Response $record) use ($field) {
 
                 $response = $record->fieldsResponses()->where('field_id', $field->id)->first();
+
                 if ($response === null) {
                     return '-';
-                }
-                if (Bolt::isJson($response->response)) {
-                    return json_decode($response->response, true);
                 }
 
                 return $response->response;
