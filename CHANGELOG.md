@@ -2,6 +2,14 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.68 - 2024-10-08
+
+### What's Changed
+
+* fix exported values if they're arrays by @atmonshi in https://github.com/lara-zeus/bolt/pull/330
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.67...v3.0.68
+
 ## v3.0.67 - 2024-10-02
 
 ### What's Changed
@@ -37,6 +45,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -588,7 +597,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 - fix sections ID when display the form as a wizard by @atmonshi in https://github.com/lara-zeus/bolt/pull/102
 - Embed by @atmonshi in https://github.com/lara-zeus/bolt/pull/103
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.9...1.2.10
-
 ## 1.2.9 - 2023-07-12
 
 ### What's Changed
