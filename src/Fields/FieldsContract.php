@@ -275,6 +275,7 @@ abstract class FieldsContract implements Arrayable, Fields
             ->label($field->name)
             ->state(function (Response $record) use ($field) {
 
+                /** @var ?Response $response */
                 $response = $record->fieldsResponses()->where('field_id', $field->id)->first();
 
                 if ($response === null) {

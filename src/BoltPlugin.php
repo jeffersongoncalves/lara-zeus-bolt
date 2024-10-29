@@ -10,9 +10,11 @@ use LaraZeus\Bolt\Filament\Resources\CollectionResource;
 use LaraZeus\Bolt\Filament\Resources\FormResource;
 use LaraZeus\Core\Concerns\CanGloballySearch;
 use LaraZeus\Core\Concerns\HasRouteNamePrefix;
+use LaraZeus\FilamentPluginTools\Concerns\CanDisableBadges;
 
 final class BoltPlugin implements Plugin
 {
+    use CanDisableBadges;
     use CanGloballySearch;
     use Configuration;
     use EvaluatesClosures;
