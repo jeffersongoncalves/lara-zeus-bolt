@@ -161,7 +161,7 @@ class Toggle extends FieldsContract
         return ExportColumn::make('zeusData.' . $field->options['htmlId'])
             ->label($field->name)
             ->state(function (Response $record) use ($field) {
-
+                /** @var ?Response $response */
                 $response = $record->fieldsResponses()->where('field_id', $field->id)->first();
                 $response = (int) $response->response;
 

@@ -14,7 +14,6 @@ use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use LaraZeus\Bolt\BoltPlugin;
-use LaraZeus\Bolt\Enums\Resources;
 use LaraZeus\Bolt\Filament\Resources\CollectionResource\Pages;
 use LaraZeus\Bolt\Filament\Resources\CollectionResource\Widgets\EditCollectionWarning;
 
@@ -33,7 +32,7 @@ class CollectionResource extends BoltResource
 
     public static function getNavigationBadge(): ?string
     {
-        if (! BoltPlugin::getNavigationBadgesVisibility(Resources::CollectionResource)) {
+        if (! BoltPlugin::getNavigationBadgesVisibility(self::class)) {
             return null;
         }
 

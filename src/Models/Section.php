@@ -34,7 +34,7 @@ class Section extends Model
         'options' => 'array',
     ];
 
-    public function getTable()
+    public function getTable(): string
     {
         return config('zeus-bolt.table-prefix') . 'sections';
     }
@@ -43,6 +43,7 @@ class Section extends Model
     {
         static::deleting(function (Section $section) {
             if ($section->isForceDeleting()) {
+                // @phpstan-ignore-next-line
                 $section->fields()->withTrashed()->get()->each(function ($item) {
                     $item->fieldResponses()->withTrashed()->get()->each(function ($item) {
                         $item->forceDelete();
