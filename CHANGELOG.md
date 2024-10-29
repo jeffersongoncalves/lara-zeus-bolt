@@ -2,6 +2,14 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.69 - 2024-10-29
+
+### What's Changed
+
+* add filament tools package by @atmonshi in https://github.com/lara-zeus/bolt/pull/332
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.68...v3.0.69
+
 ## v3.0.68 - 2024-10-08
 
 ### What's Changed
@@ -45,6 +53,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -598,7 +607,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 - Embed by @atmonshi in https://github.com/lara-zeus/bolt/pull/103
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.9...1.2.10
 ## 1.2.9 - 2023-07-12
-
 ### What's Changed
 
 - fix sorting in collections by @atmonshi in https://github.com/lara-zeus/bolt/pull/97
