@@ -53,11 +53,11 @@ return [
 
     'defaultMailable' => \LaraZeus\Bolt\Mail\FormSubmission::class,
 
-    'uploadDisk' => 'public',
+    'uploadDisk' => env('BOLT_FILESYSTEM_DISK', 'public'),
 
-    'uploadDirectory' => 'forms',
+    'uploadDirectory' => env('BOLT_FILESYSTEM_PREFIX', 'forms'),
 
-    'uploadVisibility' => 'public',
+    'uploadVisibility' => env('BOLT_FILESYSTEM_VISIBILITY', 'public'),
 
     'show_presets' => false,
 
