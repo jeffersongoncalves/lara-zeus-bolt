@@ -3,6 +3,7 @@
 namespace LaraZeus\Bolt\Fields\Classes;
 
 use Filament\Forms\Components\Hidden;
+use Illuminate\Support\Facades\Storage;
 use LaraZeus\Accordion\Forms\Accordion;
 use LaraZeus\Accordion\Forms\Accordions;
 use LaraZeus\Bolt\Facades\Bolt;
@@ -68,11 +69,13 @@ class FileUpload extends FieldsContract
     public function getResponse(Field $field, FieldResponse $resp): string
     {
         $responseValue = filled($resp->response) ? Bolt::isJson($resp->response) ? json_decode($resp->response) : [$resp->response] : [];
+        $disk = Storage::disk(config('zeus-bolt.uploadDisk'));
 
         return view('zeus::filament.fields.file-upload')
             ->with('resp', $resp)
             ->with('responseValue', $responseValue)
             ->with('field', $field)
+            ->with('disk', $disk)
             ->render();
     }
 

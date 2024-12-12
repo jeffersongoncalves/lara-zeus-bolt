@@ -6,7 +6,11 @@
                         target="_blank"
                         size="sm"
                         outlined
-                        href="{{ Storage::disk(config('zeus-bolt.uploadDisk'))->url($file) }}"
+                        @if(config('zeus-bolt.uploadVisibility') === 'private')
+                            href="{{ $disk->temporaryUrl($file, now()->addMinute()) }}"
+                        @else
+                            href="{{ $disk->url($file) }}"
+                        @endif
                 >
                         {{ __('view file') .': '. $loop->iteration }}
                 </x-filament::link>
