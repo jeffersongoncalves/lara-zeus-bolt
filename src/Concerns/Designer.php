@@ -2,15 +2,16 @@
 
 namespace LaraZeus\Bolt\Concerns;
 
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\Tabs;
-use Filament\Forms\Components\Tabs\Tab;
-use Filament\Forms\Components\Wizard;
-use Filament\Forms\Components\Wizard\Step;
 use Filament\Forms\Get;
-use LaraZeus\Bolt\Facades\Bolt;
-use LaraZeus\Bolt\Facades\Extensions;
 use LaraZeus\Bolt\Models\Form;
+use LaraZeus\Bolt\Facades\Bolt;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Tabs;
+use Filament\Forms\Components\Wizard;
+use LaraZeus\Bolt\Facades\Extensions;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Tabs\Tab;
+use Filament\Forms\Components\Wizard\Step;
 use LaraZeus\Bolt\Models\Section as ZeusSection;
 
 trait Designer
@@ -97,7 +98,7 @@ trait Designer
         return $fields;
     }
 
-    private static function drawSections(Form $zeusForm, ZeusSection $section, array $fields): Tab | Step | Section
+    private static function drawSections(Form $zeusForm, ZeusSection $section, array $fields): Tab | Step | Section | Grid
     {
         if (optional($zeusForm->options)['show-as'] === 'tabs') {
             $component = Tab::make($section->name)
@@ -108,6 +109,8 @@ trait Designer
              //   ->live()
                 ->description($section->description)
                 ->icon($section->icon ?? null);
+        } elseif ($section->grid == true) {
+            $component = Grid::make($section->name);
         } else {
             $component = Section::make($section->name)
                 //  ->live()
