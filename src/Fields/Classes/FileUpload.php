@@ -73,7 +73,7 @@ class FileUpload extends FieldsContract
         $disk = Storage::disk(config('zeus-bolt.uploadDisk'));
 
         $getUrl = fn($file) => config('zeus-bolt.uploadVisibility') === 'private'
-            ? $disk->temporaryUrl($file, now()->addMinute())
+            ? $disk->temporaryUrl($file, now()->addDay())
             : $disk->url($file);
 
         return view('zeus::filament.fields.file-upload')
