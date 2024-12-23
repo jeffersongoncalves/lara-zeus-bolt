@@ -55,7 +55,7 @@ return [
 
     'uploadDisk' => env('BOLT_FILESYSTEM_DISK', 'public'),
 
-    'uploadDirectory' => env('BOLT_FILESYSTEM_PREFIX', 'forms'),
+    'uploadDirectory' => env('BOLT_FILESYSTEM_DIRECTORY', 'forms'),
 
     'uploadVisibility' => env('BOLT_FILESYSTEM_VISIBILITY', 'public'),
 
