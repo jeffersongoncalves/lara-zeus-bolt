@@ -2,6 +2,19 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.71 - 2024-12-24
+
+### What's Changed
+
+* When cloning, merge in all the options from the original item by @holmesadam in https://github.com/lara-zeus/bolt/pull/340
+* Fix issue with cloning form fields by @holmesadam in https://github.com/lara-zeus/bolt/pull/338
+* Fix conditional visibility when relying on a toggle field being false by @holmesadam in https://github.com/lara-zeus/bolt/pull/339
+* Don't use the hint text in the tooltip by @holmesadam in https://github.com/lara-zeus/bolt/pull/342
+* Allow label to be hidden on all fields by @holmesadam in https://github.com/lara-zeus/bolt/pull/341
+* Fix issue with inline not working on Toggle by @holmesadam in https://github.com/lara-zeus/bolt/pull/337
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.70...v3.0.71
+
 ## v3.0.70 - 2024-12-24
 
 ### What's Changed
@@ -67,6 +80,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -626,7 +640,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 - fix sorting in collections by @atmonshi in https://github.com/lara-zeus/bolt/pull/97
 - fix date ended and add some validation by @atmonshi in https://github.com/lara-zeus/bolt/pull/98
 - update core by @atmonshi in https://github.com/lara-zeus/bolt/pull/99
-
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.8...1.2.9
 
 ## 1.2.8 - 2023-07-11
