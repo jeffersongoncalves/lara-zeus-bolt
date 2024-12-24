@@ -2,6 +2,20 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.70 - 2024-12-24
+
+### What's Changed
+
+* Update documentation to fix typos and update consistency by @holmesadam in https://github.com/lara-zeus/bolt/pull/333
+* Support for  downloading File Uploads to Private Filedisks by @aSeriousDeveloper in https://github.com/lara-zeus/bolt/pull/334
+
+### New Contributors
+
+* @holmesadam made their first contribution in https://github.com/lara-zeus/bolt/pull/333
+* @aSeriousDeveloper made their first contribution in https://github.com/lara-zeus/bolt/pull/334
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.69...v3.0.70
+
 ## v3.0.69 - 2024-10-29
 
 ### What's Changed
@@ -53,6 +67,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -608,7 +623,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.9...1.2.10
 ## 1.2.9 - 2023-07-12
 ### What's Changed
-
 - fix sorting in collections by @atmonshi in https://github.com/lara-zeus/bolt/pull/97
 - fix date ended and add some validation by @atmonshi in https://github.com/lara-zeus/bolt/pull/98
 - update core by @atmonshi in https://github.com/lara-zeus/bolt/pull/99
