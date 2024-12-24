@@ -368,7 +368,7 @@ trait Schemata
                 ->cloneable()
                 ->minItems(1)
 
-                ->cloneAction(fn(Action $action) => $action->action(function (Component $component, $arguments) {
+                ->cloneAction(fn (Action $action) => $action->action(function (Component $component, $arguments) {
                     $items = $component->getState();
                     $originalItem = $items[$arguments['item']];
                     $clonedItem = array_merge($originalItem, [
