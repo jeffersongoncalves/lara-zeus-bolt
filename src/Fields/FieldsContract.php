@@ -91,7 +91,7 @@ abstract class FieldsContract implements Arrayable, Fields
                     return null;
                 }
 
-                //@phpstan-ignore-next-line
+                // @phpstan-ignore-next-line
                 if (! $zeusField instanceof FieldPreset && $zeusField->section->form->extensions !== 'LaraZeus\\BoltPro\\Extensions\\Grades') {
                     return null;
                 }
@@ -206,7 +206,7 @@ abstract class FieldsContract implements Arrayable, Fields
         return (is_array($response)) ? implode(', ', $response) : $response;
     }
 
-    //@phpstan-ignore-next-line
+    // @phpstan-ignore-next-line
     public static function getFieldCollectionItemsList(Field | FieldPreset | array $zeusField): Collection | array
     {
         if (is_array($zeusField)) {
@@ -215,28 +215,28 @@ abstract class FieldsContract implements Arrayable, Fields
 
         $getCollection = collect();
 
-        //@phpstan-ignore-next-line
+        // @phpstan-ignore-next-line
         if (optional($zeusField->options)['dataSource'] === null) {
             return $getCollection;
         }
 
-        //@phpstan-ignore-next-line
+        // @phpstan-ignore-next-line
         if ($zeusField instanceof FieldPreset && is_string($zeusField->options)) {
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             $zeusField->options = json_decode($zeusField->options, true);
         }
 
         // to not braking old dataSource structure
-        //@phpstan-ignore-next-line
+        // @phpstan-ignore-next-line
         if ((int) $zeusField->options['dataSource'] !== 0) {
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             if ($zeusField instanceof FieldPreset) {
-                //@phpstan-ignore-next-line
+                // @phpstan-ignore-next-line
                 $getCollection = \LaraZeus\BoltPro\Models\Collection::query()
-                    //@phpstan-ignore-next-line
+                    // @phpstan-ignore-next-line
                     ->find($zeusField->options['dataSource'] ?? 0)
                     ->values;
-                //@phpstan-ignore-next-line
+                // @phpstan-ignore-next-line
                 $getCollection = collect(json_decode($getCollection, true))
                     ->pluck('itemValue', 'itemKey');
             } else {
@@ -250,7 +250,7 @@ abstract class FieldsContract implements Arrayable, Fields
             }
         } else {
             if (class_exists($zeusField->options['dataSource'])) {
-                //@phpstan-ignore-next-line
+                // @phpstan-ignore-next-line
                 $dataSourceClass = new $zeusField->options['dataSource'];
                 $getCollection = $dataSourceClass->getQuery()->pluck(
                     $dataSourceClass->getValuesUsing(),
