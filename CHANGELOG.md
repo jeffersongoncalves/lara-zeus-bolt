@@ -2,6 +2,20 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.72 - 2025-01-05
+
+### What's Changed
+
+* Update composer.lock by @atmonshi in https://github.com/lara-zeus/bolt/pull/343
+* Allow sections to be styled as a Grid component instead of a Section by @holmesadam in https://github.com/lara-zeus/bolt/pull/336
+
+### to update:
+
+- run: `composer update`
+- run: `php artisan vendor:publish --tag=zeus-bolt-migrations`, there is a [new column on section table](https://github.com/lara-zeus/bolt/blob/3.x/database/migrations/add_borderless_to_section.php.stub) `borderless`. For more info check the #336
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.71...v3.0.72
+
 ## v3.0.71 - 2024-12-24
 
 ### What's Changed
@@ -80,6 +94,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -641,7 +656,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 - fix date ended and add some validation by @atmonshi in https://github.com/lara-zeus/bolt/pull/98
 - update core by @atmonshi in https://github.com/lara-zeus/bolt/pull/99
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.8...1.2.9
-
 ## 1.2.8 - 2023-07-11
 
 ### What's Changed
