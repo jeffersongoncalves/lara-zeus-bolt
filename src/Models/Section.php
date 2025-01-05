@@ -17,7 +17,7 @@ use Spatie\Translatable\HasTranslations;
  * @property string $columns
  * @property string $description
  * @property bool $aside
- * @property bool $grid
+ * @property bool $borderless
  * @property bool $compact
  * @property mixed $fields
  */

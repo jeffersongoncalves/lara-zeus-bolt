@@ -56,7 +56,9 @@ trait Schemata
     {
         return [
             TextInput::make('description')
+                ->hidden(fn (Get $get) => $get('borderless') === true)
                 ->nullable()
+                ->live()
                 ->visible($formOptions['show-as'] !== 'tabs')
                 ->label(__('Section Description')),
 
@@ -79,21 +81,21 @@ trait Schemata
                                     'lg' => 3,
                                     '2xl' => 5,
                                 ])
-                                ->visible(fn (Get $get) => $formOptions['show-as'] === 'page' && $get('grid') === false)
+                                ->visible(fn (Get $get) => $formOptions['show-as'] === 'page' && $get('borderless') === false)
                                 ->label(__('Section icon')),
                             Toggle::make('aside')
                                 ->default(false)
-                                ->visible(fn (Get $get) => $formOptions['show-as'] === 'page' && $get('grid') === false)
+                                ->visible(fn (Get $get) => $formOptions['show-as'] === 'page' && $get('borderless') === false)
                                 ->label(__('show as aside')),
-                            Toggle::make('grid')
+                            Toggle::make('borderless')
                                 ->live()
                                 ->default(false)
                                 ->visible($formOptions['show-as'] === 'page')
-                                ->label(__('Use Grid'))
-                                ->hint('Use a Grid instead of a Section'),
+                                ->label(__('Borderless Section'))
+                                ->helperText('Show the section without borders'),
                             Toggle::make('compact')
                                 ->default(false)
-                                ->visible(fn (Get $get) => $formOptions['show-as'] === 'page' && $get('grid') === false)
+                                ->visible(fn (Get $get) => $formOptions['show-as'] === 'page' && $get('borderless') === false)
                                 ->label(__('Compact section')),
                         ]),
                     self::visibility($allSections),
@@ -446,7 +448,7 @@ trait Schemata
 
             Hidden::make('compact')->default(0)->nullable(),
             Hidden::make('aside')->default(0)->nullable(),
-            Hidden::make('grid')->default(0)->nullable(),
+            Hidden::make('borderless')->default(0)->nullable(),
             Hidden::make('icon')->nullable(),
             Hidden::make('columns')->default(1)->nullable(),
             Hidden::make('description')->nullable(),

@@ -115,8 +115,6 @@
   "From 1-12": "From 1-12",
   "Section icon": "Section icon",
   "show as aside": "Show as aside",
-  "Use Grid": "Use Grid",
-  "Use a Grid instead of a Section": "Use a Grid instead of a Section",
   "Show As Tabs": "Show As Tabs",
   "Show the Form as Tabs": "Show the Form as Tabs",
   "Show the form as": "Show the form as",
@@ -206,5 +204,7 @@
   "View Form": "View Form",
   "Thanks": "Thanks",
   "New Submission in": "New Submission in",
-  "Form Links": "Form Links"
+  "Form Links": "Form Links",
+  "Borderless Section": "Borderless Section",
+  "Show the section without borders": "Show the section with borders"
 }

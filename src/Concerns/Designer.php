@@ -109,7 +109,7 @@ trait Designer
              //   ->live()
                 ->description($section->description)
                 ->icon($section->icon ?? null);
-        } elseif ($section->grid == true) {
+        } elseif ((bool) $section->borderless === true) {
             $component = Grid::make($section->name);
         } else {
             $component = Section::make($section->name)
