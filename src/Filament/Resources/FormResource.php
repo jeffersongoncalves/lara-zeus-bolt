@@ -205,9 +205,9 @@ class FormResource extends BoltResource
         ];
 
         if (Bolt::hasPro()) {
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             $pages['prefilled'] = \LaraZeus\BoltPro\Livewire\PrefilledForm::route('/{record}/prefilled');
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             $pages['share'] = \LaraZeus\BoltPro\Livewire\ShareForm::route('/{record}/share');
         }
 
@@ -224,7 +224,7 @@ class FormResource extends BoltResource
         ];
 
         if (Bolt::hasPro()) {
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             $widgets[] = \LaraZeus\BoltPro\Widgets\ResponsesPerCollection::class;
         }
 
@@ -264,7 +264,7 @@ class FormResource extends BoltResource
         }
 
         if (class_exists(\LaraZeus\Helen\HelenServiceProvider::class)) {
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             $advancedActions[] = \LaraZeus\Helen\Actions\ShortUrlAction::make('get-link')
                 ->label(__('Short Link'))
                 ->distUrl(fn (ZeusForm $record) => route(BoltPlugin::get()->getRouteNamePrefix() . 'bolt.form.show', $record));
@@ -283,7 +283,7 @@ class FormResource extends BoltResource
         ];
 
         if (Bolt::hasPro()) {
-            //@phpstan-ignore-next-line
+            // @phpstan-ignore-next-line
             $formNavs[] = \LaraZeus\BoltPro\Livewire\ShareForm::class;
         }
 
