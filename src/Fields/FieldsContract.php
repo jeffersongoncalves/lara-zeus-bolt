@@ -112,12 +112,16 @@ abstract class FieldsContract implements Arrayable, Fields
             $component = $component->columnSpanFull();
         }
 
+        if (optional($zeusField->options)['hidden_label']) {
+            $component = $component->hiddenLabel();
+        }
+
         if (optional($zeusField->options)['hint']) {
             if (optional($zeusField->options)['hint']['text']) {
                 $component = $component->hint($zeusField->options['hint']['text']);
             }
             if (optional($zeusField->options)['hint']['icon']) {
-                $component = $component->hintIcon($zeusField->options['hint']['icon'], tooltip: $zeusField->options['hint']['icon-tooltip'] ?? $zeusField->options['hint']['text']);
+                $component = $component->hintIcon($zeusField->options['hint']['icon'], tooltip: $zeusField->options['hint']['icon-tooltip']);
             }
             if (optional($zeusField->options)['hint']['color']) {
                 $component = $component->hintColor(fn () => Color::hex($zeusField->options['hint']['color']));
@@ -138,6 +142,11 @@ abstract class FieldsContract implements Arrayable, Fields
                 }
 
                 $relatedFieldArray = Arr::wrap($get('zeusData.' . $relatedField));
+
+                // In the example where a field is only visible when the related field is NOT checked,
+                // we need to convert booleans to strings for in_array comparison
+                $relatedFieldArray = array_map(fn ($value) => is_bool($value) ? ($value ? 'true' : 'false') : $value, $relatedFieldArray);
+
                 if (in_array($relatedFieldValues, $relatedFieldArray)) {
                     return true;
                 }

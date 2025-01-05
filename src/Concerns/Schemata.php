@@ -377,14 +377,14 @@ trait Schemata
                 ->cloneable()
                 ->minItems(1)
 
-                ->cloneAction(fn (Action $action) => $action->action(function (Component $component) {
+                ->cloneAction(fn (Action $action) => $action->action(function (Component $component, $arguments) {
                     $items = $component->getState();
-                    $originalItem = end($items);
+                    $originalItem = $items[$arguments['item']];
                     $clonedItem = array_merge($originalItem, [
                         'name' => $originalItem['name'] . ' new',
-                        'options' => [
+                        'options' => array_merge($originalItem['options'], [
                             'htmlId' => $originalItem['options']['htmlId'] . Str::random(2),
-                        ],
+                        ]),
                     ]);
 
                     $items[] = $clonedItem;
