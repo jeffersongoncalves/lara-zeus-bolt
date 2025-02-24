@@ -96,6 +96,7 @@ class CategoryResource extends BoltResource
                     ->toggleable()
                     ->label(__('Logo')),
                 TextColumn::make('name')
+                    ->forceSearchCaseInsensitive()
                     ->label(__('Name'))
                     ->sortable()
                     ->toggleable()

@@ -151,8 +151,18 @@ class FormResource extends BoltResource
             ->reorderable('ordering')
             ->columns([
                 TextColumn::make('id')->sortable()->label(__('Form ID'))->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('name')->searchable()->sortable()->label(__('Form Name'))->toggleable(),
-                TextColumn::make('category.name')->searchable()->label(__('Category'))->sortable()->toggleable(),
+                TextColumn::make('name')
+                    ->forceSearchCaseInsensitive()
+                    ->searchable()
+                    ->sortable()
+                    ->label(__('Form Name'))
+                    ->toggleable(),
+                TextColumn::make('category.name')
+                    ->forceSearchCaseInsensitive()
+                    ->searchable()
+                    ->label(__('Category'))
+                    ->sortable()
+                    ->toggleable(),
                 IconColumn::make('is_active')->boolean()->label(__('Is Active'))->sortable()->toggleable(),
                 TextColumn::make('start_date')->dateTime()->searchable()->sortable()->label(__('Start Date'))->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('end_date')->dateTime()->searchable()->sortable()->label(__('End Date'))->toggleable(isToggledHiddenByDefault: true),

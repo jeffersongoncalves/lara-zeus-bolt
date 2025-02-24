@@ -92,6 +92,7 @@ class CollectionResource extends BoltResource
         return $table
             ->columns([
                 TextColumn::make('name')
+                    ->forceSearchCaseInsensitive()
                     ->label(__('Collections Name'))
                     ->searchable()
                     ->sortable()
