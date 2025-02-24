@@ -2,6 +2,16 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.73 - 2025-02-24
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/lara-zeus/bolt/pull/344
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/lara-zeus/bolt/pull/345
+* make searching case insensitive by @atmonshi in https://github.com/lara-zeus/bolt/pull/348
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.72...v3.0.73
+
 ## v3.0.72 - 2025-01-05
 
 ### What's Changed
@@ -94,6 +104,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -657,7 +668,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 - update core by @atmonshi in https://github.com/lara-zeus/bolt/pull/99
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.8...1.2.9
 ## 1.2.8 - 2023-07-11
-
 ### What's Changed
 
 - allow to set the default value by string param by @atmonshi in https://github.com/lara-zeus/bolt/pull/96
