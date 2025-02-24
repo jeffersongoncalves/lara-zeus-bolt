@@ -59,8 +59,21 @@ return [
 
     'uploadVisibility' => env('BOLT_FILESYSTEM_VISIBILITY', 'public'),
 
+    /*
+     * if you have installed Bolt Pro, you can enable the presets here
+     */
     'show_presets' => false,
 
+    /**
+     * the preset comes with a demo forms:
+     * a Contact form and Ticket support form.
+     * if you dont want them, feel free to set this to false
+     * */
+    'show_core_presets' => true,
+
+    /*
+     * if you have installed Bolt Pro, you can enable the form design option here
+     */
     'allow_design' => false,
 
     /**
