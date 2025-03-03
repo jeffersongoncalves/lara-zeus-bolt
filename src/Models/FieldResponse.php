@@ -35,19 +35,16 @@ class FieldResponse extends Model
         return FieldResponseFactory::new();
     }
 
-    /** @return BelongsTo<Field, FieldResponse> */
     public function field(): BelongsTo
     {
         return $this->belongsTo(config('zeus-bolt.models.Field'));
     }
 
-    /** @return BelongsTo<Response, FieldResponse> */
     public function parentResponse()
     {
         return $this->belongsTo(config('zeus-bolt.models.Response'), 'response_id', 'id');
     }
 
-    /** @return BelongsTo<Form, FieldResponse> */
     public function form()
     {
         return $this->belongsTo(config('zeus-bolt.models.Form'));

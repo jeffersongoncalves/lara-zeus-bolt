@@ -32,7 +32,7 @@
         "flowframe/laravel-trend": "^0.4",
         "guava/filament-icon-picker": "^2.3",
         "lara-zeus/accordion": "^1.1",
-        "lara-zeus/core": "^3.1",
+        "lara-zeus/core": "^3.2",
         "lara-zeus/filament-plugin-tools": "^1.0",
         "lara-zeus/list-group": "^1.0",
         "secondnetwork/blade-tabler-icons": "^3.30"

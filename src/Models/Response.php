@@ -57,7 +57,6 @@ class Response extends Model
             }
 
             if ($response->isForceDeleting()) {
-                // @phpstan-ignore-next-line
                 $response->fieldsResponses()->withTrashed()->get()->each(fn ($item) => $item->forceDelete());
             } else {
                 $response->fieldsResponses->each(fn ($item) => $item->delete());
@@ -72,7 +71,6 @@ class Response extends Model
         return ResponseFactory::new();
     }
 
-    /** @phpstan-return HasMany<FieldResponse> */
     public function fieldsResponses(): HasMany
     {
         return $this->hasMany(config('zeus-bolt.models.FieldResponse'));
@@ -83,7 +81,6 @@ class Response extends Model
         return $this->belongsTo(config('zeus-bolt.models.User') ?? config('auth.providers.users.model'));
     }
 
-    /** @return BelongsTo<Form, Response> */
     public function form(): BelongsTo
     {
         return $this->belongsTo(config('zeus-bolt.models.Form'));

@@ -11,18 +11,18 @@ it('can test', function () {
 });
 
 it('can render category list', function () {
-get(CategoryResource::getUrl('index'))->assertSuccessful();
+    get(CategoryResource::getUrl('index'))->assertSuccessful();
 
     get(CategoryResource::getUrl())
         ->assertSuccessful();
-    });
+});
 
 it('can render collection list', function () {
-get(CollectionResource::getUrl())
-->assertSuccessful();
-    });
+    get(CollectionResource::getUrl())
+        ->assertSuccessful();
+});
 
 it('can render form list', function () {
-get(FormResource::getUrl())
-->assertSuccessful();
-    });
+    get(FormResource::getUrl())
+        ->assertSuccessful();
+});
