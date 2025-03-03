@@ -44,7 +44,6 @@ class Section extends Model
     {
         static::deleting(function (Section $section) {
             if ($section->isForceDeleting()) {
-                // @phpstan-ignore-next-line
                 $section->fields()->withTrashed()->get()->each(function ($item) {
                     $item->fieldResponses()->withTrashed()->get()->each(function ($item) {
                         $item->forceDelete();
@@ -67,13 +66,11 @@ class Section extends Model
         return SectionFactory::new();
     }
 
-    /** @phpstan-return hasMany<Field> */
     public function fields(): HasMany
     {
         return $this->hasMany(config('zeus-bolt.models.Field'), 'section_id', 'id');
     }
 
-    /** @return BelongsTo<Form, Section> */
     public function form(): BelongsTo
     {
         return $this->belongsTo(config('zeus-bolt.models.Form'));

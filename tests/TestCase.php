@@ -25,7 +25,7 @@ use LaraZeus\Core\CoreServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use RyanChandler\TablerIcons\BladeTablerIconsServiceProvider;
+use secondnetwork\TablerIcons\BladeTablerIconsServiceProvider;
 
 class TestCase extends Orchestra
 {
