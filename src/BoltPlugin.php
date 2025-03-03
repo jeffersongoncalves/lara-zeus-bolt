@@ -8,8 +8,8 @@ use Filament\Support\Concerns\EvaluatesClosures;
 use LaraZeus\Bolt\Filament\Resources\CategoryResource;
 use LaraZeus\Bolt\Filament\Resources\CollectionResource;
 use LaraZeus\Bolt\Filament\Resources\FormResource;
-use LaraZeus\FilamentPluginTools\Concerns\CanGloballySearch;
 use LaraZeus\FilamentPluginTools\Concerns\CanDisableBadges;
+use LaraZeus\FilamentPluginTools\Concerns\CanGloballySearch;
 use LaraZeus\FilamentPluginTools\Concerns\HasRouteNamePrefix;
 
 final class BoltPlugin implements Plugin
