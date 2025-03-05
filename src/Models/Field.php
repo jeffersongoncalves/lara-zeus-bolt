@@ -42,6 +42,7 @@ class Field extends Model
     {
         static::deleting(function (Field $field) {
             if ($field->isForceDeleting()) {
+                // @phpstan-ignore-next-line
                 $field->fieldResponses()->withTrashed()->get()->each(function ($item) {
                     $item->forceDelete();
                 });

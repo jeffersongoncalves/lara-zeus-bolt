@@ -40,12 +40,12 @@ class FieldResponse extends Model
         return $this->belongsTo(config('zeus-bolt.models.Field'));
     }
 
-    public function parentResponse()
+    public function parentResponse(): BelongsTo
     {
         return $this->belongsTo(config('zeus-bolt.models.Response'), 'response_id', 'id');
     }
 
-    public function form()
+    public function form(): BelongsTo
     {
         return $this->belongsTo(config('zeus-bolt.models.Form'));
     }
