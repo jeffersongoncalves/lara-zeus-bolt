@@ -57,6 +57,7 @@ class Response extends Model
             }
 
             if ($response->isForceDeleting()) {
+                // @phpstan-ignore-next-line
                 $response->fieldsResponses()->withTrashed()->get()->each(fn ($item) => $item->forceDelete());
             } else {
                 $response->fieldsResponses->each(fn ($item) => $item->delete());

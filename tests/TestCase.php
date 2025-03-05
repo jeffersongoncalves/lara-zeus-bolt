@@ -2,7 +2,6 @@
 
 namespace LaraZeus\Bolt\Tests;
 
-use ArchTech\SEO\SEOServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Codeat3\BladeClarityIcons\BladeClarityIconsServiceProvider;
@@ -22,6 +21,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use LaraZeus\Bolt\BoltServiceProvider;
 use LaraZeus\Bolt\Tests\Models\User;
 use LaraZeus\Core\CoreServiceProvider;
+use LaraZeus\SEO\SEOServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
@@ -85,10 +85,5 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
     }
 }

@@ -42,8 +42,10 @@ class Section extends Model
 
     protected static function booted(): void
     {
+        parent::booted();
         static::deleting(function (Section $section) {
             if ($section->isForceDeleting()) {
+                // @phpstan-ignore-next-line
                 $section->fields()->withTrashed()->get()->each(function ($item) {
                     $item->fieldResponses()->withTrashed()->get()->each(function ($item) {
                         $item->forceDelete();

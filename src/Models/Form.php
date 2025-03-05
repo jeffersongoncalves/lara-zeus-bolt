@@ -85,6 +85,7 @@ class Form extends Model
             if ($form->isForceDeleting()) {
                 // @phpstan-ignore-next-line
                 $form->responses()->withTrashed()->get()->each(fn ($item) => $item->forceDelete());
+                // @phpstan-ignore-next-line
                 $form->sections()->withTrashed()->get()->each(function ($item) {
                     $item->fields()->withTrashed()->get()->each(fn ($item) => $item->forceDelete());
                     $item->forceDelete();
