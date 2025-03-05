@@ -2,7 +2,7 @@
 
 namespace LaraZeus\Bolt\Tests;
 
-use ArchTech\SEO\SEOServiceProvider;
+use LaraZeus\SEO\SEOServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Codeat3\BladeClarityIcons\BladeClarityIconsServiceProvider;
