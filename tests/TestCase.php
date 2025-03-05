@@ -2,7 +2,6 @@
 
 namespace LaraZeus\Bolt\Tests;
 
-use LaraZeus\SEO\SEOServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Codeat3\BladeClarityIcons\BladeClarityIconsServiceProvider;
@@ -22,6 +21,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use LaraZeus\Bolt\BoltServiceProvider;
 use LaraZeus\Bolt\Tests\Models\User;
 use LaraZeus\Core\CoreServiceProvider;
+use LaraZeus\SEO\SEOServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
