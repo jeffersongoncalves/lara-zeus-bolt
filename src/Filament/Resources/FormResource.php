@@ -267,7 +267,7 @@ class FormResource extends BoltResource
         if (Bolt::hasPro()) {
             $advancedActions[] = Action::make('prefilledLink')
                 ->label(__('Prefilled Link'))
-                ->icon('iconpark-formone-o')
+                ->icon('tabler-input-spark')
                 ->tooltip(__('Get Prefilled Link'))
                 ->visible(Bolt::hasPro())
                 ->url(fn (ZeusForm $record): string => FormResource::getUrl('prefilled', ['record' => $record]));

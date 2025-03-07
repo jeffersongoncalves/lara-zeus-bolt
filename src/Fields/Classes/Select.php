@@ -42,7 +42,7 @@ class Select extends FieldsContract
                 ->accordions([
                     Accordion::make('general-options')
                         ->label(__('General Options'))
-                        ->icon('iconpark-checklist-o')
+                        ->icon('tabler-settings')
                         ->columns()
                         ->schema([
                             self::required(),

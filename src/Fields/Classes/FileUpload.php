@@ -39,7 +39,7 @@ class FileUpload extends FieldsContract
                 ->accordions([
                     Accordion::make('general-options')
                         ->label(__('General Options'))
-                        ->icon('iconpark-checklist-o')
+                        ->icon('tabler-settings')
                         ->schema([
                             \Filament\Forms\Components\Toggle::make('options.allow_multiple')->label(__('Allow Multiple')),
                             self::required(),

@@ -67,7 +67,7 @@ trait Schemata
                     Accordion::make('visual-options')
                         ->label(__('Visual Options'))
                         ->columns()
-                        ->icon('iconpark-viewgriddetail-o')
+                        ->icon('tabler-list-details')
                         ->schema([
                             Select::make('columns')
                                 ->options(fn (): array => array_combine(range(1, 12), range(1, 12)))

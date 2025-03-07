@@ -42,7 +42,7 @@ class TextInput extends FieldsContract
                 ->accordions([
                     Accordion::make('validation-options')
                         ->label(__('Validation Options'))
-                        ->icon('iconpark-checkcorrect-o')
+                        ->icon('tabler-input-check')
                         ->columns()
                         ->schema([
                             Select::make('options.dateType')
@@ -82,7 +82,7 @@ class TextInput extends FieldsContract
                     Accordion::make('visual-options')
                         ->label(__('Visual Options'))
                         ->columns()
-                        ->icon('iconpark-viewgriddetail-o')
+                        ->icon('tabler-float-center')
                         ->schema([
                             TextInputAlias::make('options.prefix')
                                 ->label(__('prefix')),
