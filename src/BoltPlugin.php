@@ -2,6 +2,7 @@
 
 namespace LaraZeus\Bolt;
 
+use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
@@ -10,15 +11,23 @@ use LaraZeus\Bolt\Filament\Resources\CollectionResource;
 use LaraZeus\Bolt\Filament\Resources\FormResource;
 use LaraZeus\FilamentPluginTools\Concerns\CanDisableBadges;
 use LaraZeus\FilamentPluginTools\Concerns\CanGloballySearch;
+use LaraZeus\FilamentPluginTools\Concerns\CanHideResources;
+use LaraZeus\FilamentPluginTools\Concerns\HasModels;
+use LaraZeus\FilamentPluginTools\Concerns\HasNavigationGroupLabel;
 use LaraZeus\FilamentPluginTools\Concerns\HasRouteNamePrefix;
 
 final class BoltPlugin implements Plugin
 {
     use CanDisableBadges;
     use CanGloballySearch;
+    use CanHideResources;
     use Configuration;
     use EvaluatesClosures;
+    use HasModels;
+    use HasNavigationGroupLabel;
     use HasRouteNamePrefix;
+
+    protected Closure | string $navigationGroupLabel = 'Bolt';
 
     public array $defaultGloballySearchableAttributes = [
         CategoryResource::class => ['name', 'slug'],
