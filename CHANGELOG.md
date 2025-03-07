@@ -2,6 +2,14 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.78 - 2025-03-07
+
+### What's Changed
+
+* remove iconpark by @atmonshi in https://github.com/lara-zeus/bolt/pull/355
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.77...v3.0.78
+
 ## v3.0.77 - 2025-03-07
 
 ### What's Changed
@@ -137,6 +145,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -710,7 +719,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.7...1.2.8
 ## 1.2.7 - 2023-07-06
 ### What's Changed
-
 - add some tests for the form resource and fill-form frontend page by @atmonshi in https://github.com/lara-zeus/bolt/pull/92
 - require at least one section and field by @atmonshi in https://github.com/lara-zeus/bolt/pull/95
 - add more tests by @atmonshi in https://github.com/lara-zeus/bolt/pull/94
