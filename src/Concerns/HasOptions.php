@@ -32,7 +32,7 @@ trait HasOptions
 
         return Accordion::make('visibility-options')
             ->label(__('Conditional Visibility'))
-            ->icon('iconpark-eyes')
+            ->icon('tabler-eye-cog')
             ->visible(fn (Livewire $livewire) => str($livewire->getName())
                 ->replace('-form', '')
                 ->explode('.')

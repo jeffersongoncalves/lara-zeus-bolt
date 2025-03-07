@@ -61,7 +61,7 @@ abstract class FieldsContract implements Arrayable, Fields
 
     public function icon(): string
     {
-        return 'iconpark-aligntextcenter-o';
+        return 'tabler-float-center';
     }
 
     public function hasOptions(): bool
