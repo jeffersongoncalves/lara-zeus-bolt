@@ -42,7 +42,7 @@ class FormResource extends BoltResource
     use HasOptions;
     use Schemata;
 
-    protected static ?string $navigationIcon = 'clarity-form-line';
+    protected static ?string $navigationIcon = 'tabler-file-description';
 
     protected static ?int $navigationSort = 1;
 
@@ -107,8 +107,8 @@ class FormResource extends BoltResource
                     IconEntry::make('is_active')
                         ->label(__('is active'))
                         ->icon(fn (string $state): string => match ($state) {
-                            '0' => 'clarity-times-circle-solid',
-                            default => 'clarity-check-circle-line',
+                            '0' => 'tabler-circle-x',
+                            default => 'tabler-circle-check',
                         })
                         ->color(fn (string $state): string => match ($state) {
                             '0' => 'warning',
@@ -255,7 +255,7 @@ class FormResource extends BoltResource
                 Action::make('entries')
                     ->color('warning')
                     ->label(__('Entries'))
-                    ->icon('clarity-data-cluster-line')
+                    ->icon('tabler-folders')
                     ->tooltip(__('view all entries'))
                     ->url(fn (ZeusForm $record): string => FormResource::getUrl('report', ['record' => $record])),
             ])
