@@ -4,7 +4,6 @@ namespace LaraZeus\Bolt\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
-use Codeat3\BladeClarityIcons\BladeClarityIconsServiceProvider;
 use Codeat3\BladeIconpark\BladeIconparkServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
 use Filament\FilamentServiceProvider;
@@ -70,7 +69,6 @@ class TestCase extends Orchestra
             CoreServiceProvider::class,
             BoltServiceProvider::class,
             SEOServiceProvider::class,
-            BladeClarityIconsServiceProvider::class,
             BladeIconparkServiceProvider::class,
             FilamentIconPickerServiceProvider::class,
         ];
