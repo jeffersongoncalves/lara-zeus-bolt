@@ -10,7 +10,11 @@ use LaraZeus\Bolt\Filament\Resources\CollectionResource;
 use LaraZeus\Bolt\Filament\Resources\FormResource;
 use LaraZeus\FilamentPluginTools\Concerns\CanDisableBadges;
 use LaraZeus\FilamentPluginTools\Concerns\CanGloballySearch;
+use LaraZeus\FilamentPluginTools\Concerns\HasModels;
+use LaraZeus\FilamentPluginTools\Concerns\HasNavigationGroupLabel;
 use LaraZeus\FilamentPluginTools\Concerns\HasRouteNamePrefix;
+use LaraZeus\FilamentPluginTools\Concerns\CanHideResources;
+use Closure;
 
 final class BoltPlugin implements Plugin
 {
@@ -19,6 +23,11 @@ final class BoltPlugin implements Plugin
     use Configuration;
     use EvaluatesClosures;
     use HasRouteNamePrefix;
+    use HasModels;
+    use HasNavigationGroupLabel;
+    use CanHideResources;
+
+    protected Closure | string $navigationGroupLabel = 'Bolt';
 
     public array $defaultGloballySearchableAttributes = [
         CategoryResource::class => ['name', 'slug'],
