@@ -20,7 +20,7 @@ These all the available configuration, and their defaults values
 BoltPlugin::make()
     // the default models, by default Bolt will read from the config file 'zeus-bolt'.
     // but if you want to customize the models per panel, you can do it here 
-    ->boltModels([
+    ->models([
         // ...
         'Category' => \App\Models\Bolt\Category::class,
         'Collection' => \App\Models\Bolt\Collection::class,
