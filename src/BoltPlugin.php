@@ -29,7 +29,7 @@ final class BoltPlugin implements Plugin
 
     protected Closure | string $navigationGroupLabel = 'Bolt';
 
-    // test
+    // test hi
 
     public array $defaultGloballySearchableAttributes = [
         CategoryResource::class => ['name', 'slug'],
