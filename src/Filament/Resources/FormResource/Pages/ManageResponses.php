@@ -135,7 +135,7 @@ class ManageResponses extends ManageRelatedRecords
                     ->exports([
                         ExcelExport::make()
                             ->fromTable()
-                            ->queue()
+                            ->queue(),
                     ])
                     ->label(__('Export Responses')),
                 // todo disabled due to issue with queues
