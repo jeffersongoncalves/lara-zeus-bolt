@@ -39,7 +39,7 @@ abstract class FieldsContract implements Arrayable, Fields
     {
         return [
             'disabled' => $this->disabled,
-            'class' => '\\' .static::class,
+            'class' => '\\' . static::class,
             'renderClass' => $this->renderClass,
             'hasOptions' => $this->hasOptions(),
             'code' => class_basename($this),
