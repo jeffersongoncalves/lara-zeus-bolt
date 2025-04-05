@@ -2,6 +2,16 @@
 
 All notable changes to `Bolt` will be documented in this file
 
+## v3.0.84 - 2025-04-05
+
+### What's Changed
+
+* change Designer trait to class by @atmonshi in https://github.com/lara-zeus/bolt/pull/366
+
+this internal change, but if you're using custom designer, make sure to update the namespace.
+
+**Full Changelog**: https://github.com/lara-zeus/bolt/compare/v3.0.83...v3.0.84
+
 ## v3.0.83 - 2025-04-05
 
 ### What's Changed
@@ -186,6 +196,7 @@ if you need to change this to use another model, add the following in your confi
     //...
     'User' => AnotherUserModel::class,
 ],
+
 
 
 
@@ -774,7 +785,6 @@ and you can remove the fork for `alperenersoy/filament-export`
 - Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/lara-zeus/bolt/pull/91
 - update all dependecies by @atmonshi in https://github.com/lara-zeus/bolt/pull/93
 **Full Changelog**: https://github.com/lara-zeus/bolt/compare/1.2.5...1.2.6
-
 ## 1.2.5 - 2023-07-02
 
 ### What's Changed
