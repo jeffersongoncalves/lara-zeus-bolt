@@ -14,7 +14,7 @@ use LaraZeus\Bolt\Facades\Extensions;
 use LaraZeus\Bolt\Models\Form;
 use LaraZeus\Bolt\Models\Section as ZeusSection;
 
-trait Designer
+class Designer
 {
     public static function ui(Form $zeusForm, bool $inline = false): array
     {

@@ -19,7 +19,6 @@ use Livewire\Component;
  */
 class FillForms extends Component implements Forms\Contracts\HasForms
 {
-    use Designer;
     use InteractsWithForms;
 
     public Form $zeusForm;
